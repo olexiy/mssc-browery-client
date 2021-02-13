@@ -8,12 +8,14 @@ import de.olexiy.spring.msscbrewery.msscbroweryclient.web.model.CustomerDto;
 import java.math.BigDecimal;
 import java.net.URI;
 import java.util.UUID;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
+@Disabled
 class BreweryClientTest {
 
   @Autowired
