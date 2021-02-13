@@ -32,16 +32,13 @@ class BreweryClientTest {
     BeerDto beerDTO = getValidBeerDto();
     URI newBeerURI = breweryClient.saveNewBeer(beerDTO);
     assertNotNull(newBeerURI);
-
-    System.out.println(newBeerURI.toString());
   }
 
   @Test
   @DisplayName("Should update existing beer with PATH")
   void updateBeer() throws Exception{
     BeerDto beerDTO = getValidBeerDto();
-    beerDTO.setId(UUID.randomUUID());
-    breweryClient.updateExistingBeer(beerDTO.getId(), beerDTO);
+    breweryClient.updateExistingBeer(UUID.randomUUID(), beerDTO);
   }
 
   @Test
@@ -63,16 +60,13 @@ class BreweryClientTest {
     CustomerDto customerDTO = getValidCustomerDto();
     URI newBeerURI = breweryClient.saveNewCustomer(customerDTO);
     assertNotNull(newBeerURI);
-
-    System.out.println(newBeerURI.toString());
   }
 
   @Test
   @DisplayName("Should update existing customer with PATH")
   void updateCustomer() throws Exception{
     CustomerDto customerDTO = getValidCustomerDto();
-    customerDTO.setId(UUID.randomUUID());
-    breweryClient.updateExistingCustomer(customerDTO.getId(), customerDTO);
+    breweryClient.updateExistingCustomer(UUID.randomUUID(), customerDTO);
   }
 
   @Test
